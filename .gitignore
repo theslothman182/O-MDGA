@@ -2,9 +2,9 @@
 /[Tt]emp/
 /[Oo]bj/
 /[Bb]uild/
-/[Pp]rojectSettings/
+/[Bb]uilds/
 /[Ll]ogs/
-/[Uu]serSettings/
+/[Uu]ser[Ss]ettings/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
