@@ -3,6 +3,7 @@
 /[Oo]bj/
 /[Bb]uild/
 /[Pp]rojectSettings/
+/[Ll]ogs/
 /[Uu]serSettings/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored

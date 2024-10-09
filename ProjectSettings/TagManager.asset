@@ -12,6 +12,12 @@ TagManager:
   - Water
   - UI
   - 
+  - Walls
+  - Ground
+  - BlueMinion
+  - RedMinion
+  - BluePlayer
+  - RedPlayer
   - 
   - 
   - 
@@ -19,13 +25,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Minimap
   - 
   - 
   - 

@@ -10,8 +10,8 @@ namespace OMDGA
     public class Main :
         MonoBehaviour
     {
-        // ****** Variables ******
-        IContext context;
+        // ****** Private Variables ******
+        private IContext context;
 
         // ****** Methods ******
         public void Start()

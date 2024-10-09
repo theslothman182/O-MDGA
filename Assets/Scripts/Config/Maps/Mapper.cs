@@ -6,7 +6,7 @@ namespace OMDGA.Config.Maps
     public class Mapper<T> :
         IMapper
     {
-        // ****** Variables ******
+        // ****** Public Variables ******
         public T map;
 
         // ****** Constructors ******

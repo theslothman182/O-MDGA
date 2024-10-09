@@ -5,9 +5,9 @@ namespace OMDGA.SingletonManagement
 {
     public static class SingletonManager
     {
-        // ****** Variables ******
-        private static Dictionary<string, object> singletons = new Dictionary<string, object>();
+        // ****** Static Variables ******
         private static GameObject singletonManagerGameObject;
+        private static Dictionary<string, object> singletons = new Dictionary<string, object>();
 
         // ****** Constructors ******
         static SingletonManager()

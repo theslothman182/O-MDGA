@@ -61,19 +61,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Config\OMDGAConfig.cs" />
+    <Compile Include="Assets\Testing\Camera\MinimapRotationScript.cs" />
     <Compile Include="Assets\Scripts\Config\Maps\OMDGAMediatorMap.cs" />
+    <Compile Include="Assets\Testing\MoveIcon.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IMapper.cs" />
     <Compile Include="Assets\Scripts\Main.cs" />
     <Compile Include="Assets\Scripts\Config\Maps\Mapper.cs" />
+    <Compile Include="Assets\Testing\Camera\CameraScript.cs" />
     <Compile Include="Assets\Scripts\Models\OMDGAModel.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IOMDGAModel.cs" />
+    <Compile Include="Assets\Testing\Minions\MinionTargetScript.cs" />
+    <Compile Include="Assets\Testing\PlayerScript.cs" />
+    <Compile Include="Assets\Testing\Minions\MinionAIScript.cs" />
+    <Compile Include="Assets\Testing\Minions\GameManager.cs" />
     <Compile Include="Assets\Scripts\SingletonManagement\SingletonManager.cs" />
     <Compile Include="Assets\Scripts\Config\Maps\OMDGACommandMap.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\robotlegs\Robotlegs-Sharp-Platform-Unity.dll" />
-    <None Include="Assets\robotlegs\swiftsuspenders-sharp.dll" />
-    <None Include="Assets\robotlegs\Robotlegs-Sharp-Framework.dll" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -412,20 +414,20 @@
       <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@1.2.6\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Robotlegs-Sharp-Platform-Unity">
+      <HintPath>Assets\Plugins\robotlegs\Robotlegs-Sharp-Platform-Unity.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.4\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Robotlegs-Sharp-Framework">
-      <HintPath>Assets\robotlegs\Robotlegs-Sharp-Framework.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="swiftsuspenders-sharp">
-      <HintPath>Assets\robotlegs\swiftsuspenders-sharp.dll</HintPath>
+      <HintPath>Assets\Plugins\robotlegs\swiftsuspenders-sharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Robotlegs-Sharp-Platform-Unity">
-      <HintPath>Assets\robotlegs\Robotlegs-Sharp-Platform-Unity.dll</HintPath>
+    <Reference Include="Robotlegs-Sharp-Framework">
+      <HintPath>Assets\Plugins\robotlegs\Robotlegs-Sharp-Framework.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="netstandard">
@@ -948,8 +950,16 @@
       <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.AI.Navigation">
+      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.AI.Navigation.Updater">
+      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Updater.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.State.Editor">
@@ -992,8 +1002,16 @@
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.AI.Navigation.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.VisualScripting.State">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
+      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
