@@ -1,10 +1,12 @@
 using OMDGA.Config.Maps;
+using OMDGA.Commands;
 using OMDGA.Interfaces;
-using OMDGA.Model;
-using OMDGA.SingletonManagement;
+using OMDGA.Models;
+using OMDGA.Utils;
 using Robotlegs.Bender.Framework.API;
 using Robotlegs.Bender.Extensions.Mediation.API;
 using Robotlegs.Bender.Extensions.EventCommand.API;
+using Robotlegs.Bender.Extensions.DirectCommand.API;
 
 namespace OMDGA.Config
 {
@@ -32,6 +34,8 @@ namespace OMDGA.Config
             commandMapper.Map();
 
             MakeAvailableSingletons();
+
+            context.injector.GetInstance<IDirectCommandMap>().Map<InitialiseCommand>().Execute();
         }
 
         private void MakeAvailableSingletons()

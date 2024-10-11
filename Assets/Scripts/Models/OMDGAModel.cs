@@ -1,6 +1,6 @@
 using OMDGA.Interfaces;
 
-namespace OMDGA.Model
+namespace OMDGA.Models
 {
     public class OMDGAModel :
         IOMDGAModel

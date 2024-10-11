@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace OMDGA.SingletonManagement
+namespace OMDGA.Utils
 {
     public static class SingletonManager
     {
@@ -16,8 +16,7 @@ namespace OMDGA.SingletonManagement
             Object.DontDestroyOnLoad(singletonManagerGameObject);
         }
 
-        // ****** Methods ******
-        // Creates a new singleton instance of the given type. If a singleton of the give type already exists, it will return null.
+        // ****** Method ******
         public static T CreateSingletonMonoBehaviour<T, K>()
             where T : class
             where K : MonoBehaviour
@@ -30,9 +29,7 @@ namespace OMDGA.SingletonManagement
                 return null;
             }
 
-            T singleton = singletonManagerGameObject.AddComponent<K>() as T;
-
-            if (singleton == null)
+            if (singletonManagerGameObject.AddComponent<K>() is not T singleton)
             {
                 Debug.LogError($"SingletonManager: {key} could not be created.");
                 return null;
@@ -42,8 +39,6 @@ namespace OMDGA.SingletonManagement
             return singleton;
         }
 
-        // Register a singleton with the SingletonManager. Management of the singleton is up to the caller. Recoomend either using CreateSingleton or setting the singleton to not be destroyed on load.
-        // Returns the object as a T is succeful, null otherwise.
         public static T Register<T>(object obj)
             where T : class
         {
@@ -59,7 +54,6 @@ namespace OMDGA.SingletonManagement
             return obj as T;
         }
 
-        // Returns a singleton of the given type. If the singleton does not exist, it will return null.
         public static T GetInstance<T>()
             where T : class
         {
@@ -74,8 +68,6 @@ namespace OMDGA.SingletonManagement
             return singletons[key] as T;
         }
 
-        // Unregister a singleton from the SingletonManager. Management of the singleton is up to the caller.
-        // If it is a MonoBehaviour, it is destroyed.
         public static bool Unregister<T>()
             where T : class
         {
@@ -87,9 +79,7 @@ namespace OMDGA.SingletonManagement
                 return false;
             }
 
-            T singleton = singletons[key] as T;
-
-            if (singleton == null)
+            if (singletons[key] is not T singleton)
             {
                 Debug.LogError($"SingletonManager: {key} is not a valid singleton.");
                 return false;
