@@ -1,0 +1,50 @@
+{
+	"data" : [
+		{
+			"name" : "Melee Barracks",
+			"health" : 2200,
+			"healthRegen" : 5.0,
+			"armor" : 15,
+			"magicResistance" : 0,
+			"attackDamageLower" : 0,
+			"attackDamageHigher" : 0,
+			"attackRange" : 0,
+			"acquisitionRange" : 0,
+			"attackSpeed" : 0,
+			"attackTime" : 0.0,
+			"attackPoint" : 0.0,
+			"attackBackswing" : 0.0,
+			"projectileSpeed" : 0,
+			"collisionSize" : 160,
+			"boundRadius" : 144,
+			"visionDay" : 900,
+			"visionNight" : 600,
+			"bountyLower" : 90,
+			"bountyHigher" : 135,
+			"teamBounty" : 155
+		},
+		{
+			"name" : "Ranged Barracks",
+			"health" : 1300,
+			"healthRegen" : 0.0,
+			"armor" : 9,
+			"magicResistance" : 0,
+			"attackDamageLower" : 0,
+			"attackDamageHigher" : 0,
+			"attackRange" : 0,
+			"acquisitionRange" : 0,
+			"attackSpeed" : 0,
+			"attackTime" : 0.0,
+			"attackPoint" : 0.0,
+			"attackBackswing" : 0.0,
+			"projectileSpeed" : 0,
+			"collisionSize" : 160,
+			"boundRadius" : 144,
+			"visionDay" : 900,
+			"visionNight" : 600,
+			"bountyLower" : 90,
+			"bountyHigher" : 135,
+			"teamBounty" : 90
+		}
+	]
+}

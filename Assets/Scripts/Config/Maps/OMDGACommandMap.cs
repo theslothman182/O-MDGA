@@ -1,3 +1,5 @@
+using OMDGA.Commands;
+using OMDGA.Events;
 using Robotlegs.Bender.Extensions.EventCommand.API;
 
 namespace OMDGA.Config.Maps
@@ -18,7 +20,9 @@ namespace OMDGA.Config.Maps
             base.Map();
 
             // ********** Commands **********
-            //map.Map(type).ToCommand<command>();
+
+            // Spawn Lane Creeps Request
+            map.Map(SpawnLaneCreepRequestEvent.Type.SpawnCreepRequest).ToCommand<SpawnLaneCreepCommand>();
         }
     }
 }

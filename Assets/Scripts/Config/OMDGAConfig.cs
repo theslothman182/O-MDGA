@@ -13,7 +13,7 @@ namespace OMDGA.Config
     public class OMDGAConfig :
         IConfig
     {
-        // ****** Injects ******
+        // ****** Injections ******
         [Inject] public IContext context;
 
         // ****** Methods ******
@@ -24,6 +24,8 @@ namespace OMDGA.Config
 
             // ********** Models **********
             context.injector.Map<IOMDGAModel>().ToSingleton<OMDGAModel>();
+            context.injector.Map<IBuildingModel>().ToSingleton<BuildingModel>();
+            context.injector.Map<ILaneCreepModel>().ToSingleton<LaneCreepModel>();
 
             // ********** Mediators **********
             OMDGAMediatorMap mediatorMapper = new OMDGAMediatorMap(mediatorMap);

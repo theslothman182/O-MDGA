@@ -1,3 +1,5 @@
+using OMDGA.Interfaces;
+using OMDGA.Mediators;
 using Robotlegs.Bender.Extensions.Mediation.API;
 
 namespace OMDGA.Config.Maps
@@ -18,8 +20,7 @@ namespace OMDGA.Config.Maps
             base.Map();
 
             // ********** Mediators **********
-            //map.Map(dispatcher).ToMediator<Mediator>();
-            //map.Map(listener).ToMediator<Mediator>();
+            map.Map<ISpawnLaneCreepRequester>().ToMediator<SpawnLaneCreepRequestMediator>();
         }
     }
 }
